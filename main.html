@@ -4,64 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WorstVolumeUI</title>
+    <title>worstVolumeUI</title>
     <link rel="stylesheet" href="./css/main.css">
     <script>
     var audioEle = document.getElementById('audio');
     var btnPlay = document.getElementById('btn-play');
     var btnPause = document.getElementById('btn-pause');
-    var btnVolume = document.getElementById('btn-volume');
+    var btnVolume = document.getElementById('btn-volume-control');
 
     function btnPlay_click() {
         audio.play();
     }
 
-    function btnPause_click{
-        audio.pause();
-    }
-
-    
-
+	function btnPause_click() {
+		audio.pause();
+	}
     </script>
 </head>
-
 <body>
-    
-
-    <audio id="audio" src="./Tab_-_Moonlit__feat._Nem_Nieves__amp__Jade_Gritty_.mp3" autoplay loop controls id="myAudio" volume="0.2">오디오 지원되지 않는 브라우저</audio>
+    <audio id="audio" src="./audio/Tab_-_Moonlit__feat._Nem_Nieves__amp__Jade_Gritty_.mp3" autoplay loop controls id="myAudio" volume="0.2"></audio>
 
 
-<button id="btn-play" onclick="btnPlay_click()" value="play"></button>
-<button id="btn-pause" onclick="btnPause_click()" value="Pause"></butoon>
+<button id="btn-play" onclick="btnPlay_click()" value="play">play</button>
+<button id="btn-pause" onclick="btnPause_click()" value="Pause">pause</butoon>
+<button id="btn-volume-control" onclick="window.open('./volumeControl1.html')" value="volume">volume</button>
 
-<div class="bgm-wrap">
-	<div id="audio-player"></div>
-	<div id="youtube-player"></div>
-	<div class="audio-box" style="">
-		<div class="audio-title-wrap">
-			<span id="audio-title"> 제목</span>
-		</div>
-		<div class="audio-control-btn-play"><i class="fa fa-play"></i></div>
-		<div class="play-time start">00:00 </div>
-		<div class="play-progress-box">
-			<div class="play-progress-bar"></div>
-		</div>
-		<div class="play-time end"> 00:00 </div>
-		<div class="play-volume-box">
-			<div class="btn-volume"><i class="fa fa-volume-up"></i></div>
-			<div class="play-volume-slider"></div>
-		</div>
-		<div class="text-play-click">※ 재생 버튼을 눌러야 배경음이 재생됩니다.</div>
-	</div>
-	<form method='post' id='bgm-upload' name='frmUpload' enctype='multipart/form-data' style="display: none">
-		<input class="bgm-file-upload" type="file" id="input-file-bgm" name="bgmfile" accept="audio/mp3, audio/ogg, audio/wav, audio/oga">
-	</form>
-
-	<div class="popup-audio-player" style="display: none">
-		<div class="audio-control-btn btn-play">
-			<i class="fa fa-play" style=""></i>
-		</div>
-	</div>
-</div>
+<div id="volume-control-1"></div>
 </body>
 </html>
