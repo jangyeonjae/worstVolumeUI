@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>worstVolumeUI</title>
+    <script src="../javaScript/js/jquery.js"></script>
     <link rel="stylesheet" href="./css/main.css">
     <script>
     var audioEle = document.getElementById('audio');
     var btnPlay = document.getElementById('btn-play');
     var btnPause = document.getElementById('btn-pause');
     var btnVolume = document.getElementById('btn-volume-control');
+    var btnVolumeSelect = document.getElementById('btn-volume-select');
+    var btn
+ 
 
     function btnPlay_click() {
         audio.play();
@@ -19,16 +23,170 @@
 	function btnPause_click() {
 		audio.pause();
 	}
+
+    function btnVolume_click() {
+
+        var volumeControl1 = document.getElementById("volume-control-1");
+        if(volumeControl1.style.display =='none'){
+            volumeControl1.style.display ='block';
+        }else{
+            volumeControl1.style.display ='none';
+        }
+    }
+
+    function volume_select() {
+        var vv_length = document.getElementsByName("vv").length;
+        var volume_value ="";
+        var s_value = 0;
+        for (var i = 0 ; i<vv_length ; i++){
+            if(document.getElementsByName("vv")[i].checked == true){
+                volume_value = (volume_value + document.getElementsByName("vv")[i].value);
+                s_value = parseInt(volume_value) * 0.01;
+                audio.volume = s_value;
+            }
+        }
+    }
+
+    function nextLevel(){
+        var volumeControl1 = document.getElementById("volume-control-1");
+        var volumeControl2 = document.getElementById("volume-control-2");
+        if(volumeControl1.style.display =='block'){
+            volumeControl1.style.display ='none';
+            volumeControl2.style.display ='block';
+        }
+    }
+
+
+
+
+
+    
     </script>
+
 </head>
 <body>
     <audio id="audio" src="./audio/Tab_-_Moonlit__feat._Nem_Nieves__amp__Jade_Gritty_.mp3" autoplay loop controls id="myAudio" volume="0.2"></audio>
 
-
+<button>prev</button>
 <button id="btn-play" onclick="btnPlay_click()" value="play">play</button>
 <button id="btn-pause" onclick="btnPause_click()" value="Pause">pause</butoon>
-<button id="btn-volume-control" onclick="window.open('./volumeControl1.html')" value="volume">volume</button>
+<button id="btn-volume-control" onclick="btnVolume_click()">volume</button>
+<button id="btn-next-level" onclick="nextLevel()">next</button>
 
-<div id="volume-control-1"></div>
+<div id="volume-control-1">
+    <p>! volume select !</p>
+        <input type="radio" name="vv" value="1">1
+        <input type="radio" name="vv" value="2">2
+        <input type="radio" name="vv" value="3">3
+        <input type="radio" name="vv" value="4">4
+        <input type="radio" name="vv" value="5">5
+        <input type="radio" name="vv" value="6">6
+        <input type="radio" name="vv" value="7">7
+        <input type="radio" name="vv" value="8">8
+        <input type="radio" name="vv" value="9">9
+        <input type="radio" name="vv" value="10">10<br>
+        <input type="radio" name="vv" value="11">11
+        <input type="radio" name="vv" value="12">12
+        <input type="radio" name="vv" value="13">13
+        <input type="radio" name="vv" value="14">14
+        <input type="radio" name="vv" value="15">15
+        <input type="radio" name="vv" value="16">16
+        <input type="radio" name="vv" value="17">17
+        <input type="radio" name="vv" value="18">18
+        <input type="radio" name="vv" value="19">19
+        <input type="radio" name="vv" value="20">20<br>
+        <input type="radio" name="vv" value="21">21
+        <input type="radio" name="vv" value="22">22
+        <input type="radio" name="vv" value="23">23
+        <input type="radio" name="vv" value="24">24
+        <input type="radio" name="vv" value="25">25
+        <input type="radio" name="vv" value="26">26
+        <input type="radio" name="vv" value="27">27
+        <input type="radio" name="vv" value="28">28
+        <input type="radio" name="vv" value="29">29
+        <input type="radio" name="vv" value="30">30<br>
+        <input type="radio" name="vv" value="31">31
+        <input type="radio" name="vv" value="32">32
+        <input type="radio" name="vv" value="33">33
+        <input type="radio" name="vv" value="34">34
+        <input type="radio" name="vv" value="35">35
+        <input type="radio" name="vv" value="36">36
+        <input type="radio" name="vv" value="37">37
+        <input type="radio" name="vv" value="38">38
+        <input type="radio" name="vv" value="39">39
+        <input type="radio" name="vv" value="40">40<br>
+        <input type="radio" name="vv" value="41">41
+        <input type="radio" name="vv" value="42">42
+        <input type="radio" name="vv" value="43">43
+        <input type="radio" name="vv" value="44">44
+        <input type="radio" name="vv" value="45">45
+        <input type="radio" name="vv" value="46">46
+        <input type="radio" name="vv" value="47">47
+        <input type="radio" name="vv" value="48">48
+        <input type="radio" name="vv" value="49">49
+        <input type="radio" name="vv" value="50">50
+        <br>
+        <input type="radio" name="vv" value="51">51
+        <input type="radio" name="vv" value="52">52
+        <input type="radio" name="vv" value="53">53
+        <input type="radio" name="vv" value="54">54
+        <input type="radio" name="vv" value="55">55
+        <input type="radio" name="vv" value="56">56
+        <input type="radio" name="vv" value="57">57
+        <input type="radio" name="vv" value="58">58
+        <input type="radio" name="vv" value="59">59
+        <input type="radio" name="vv" value="60">60<br>
+        <input type="radio" name="vv" value="61">61
+        <input type="radio" name="vv" value="62">62
+        <input type="radio" name="vv" value="63">63
+        <input type="radio" name="vv" value="64">64
+        <input type="radio" name="vv" value="65">65
+        <input type="radio" name="vv" value="66">66
+        <input type="radio" name="vv" value="67">67
+        <input type="radio" name="vv" value="68">68
+        <input type="radio" name="vv" value="69">69
+        <input type="radio" name="vv" value="70">70<br>
+        <input type="radio" name="vv" value="71">71
+        <input type="radio" name="vv" value="72">72
+        <input type="radio" name="vv" value="73">73
+        <input type="radio" name="vv" value="74">74
+        <input type="radio" name="vv" value="75">75
+        <input type="radio" name="vv" value="76">76
+        <input type="radio" name="vv" value="77">77
+        <input type="radio" name="vv" value="78">78
+        <input type="radio" name="vv" value="79">79
+        <input type="radio" name="vv" value="80">80<br>
+        <input type="radio" name="vv" value="81">81
+        <input type="radio" name="vv" value="82">82
+        <input type="radio" name="vv" value="83">83
+        <input type="radio" name="vv" value="84">84
+        <input type="radio" name="vv" value="85">85
+        <input type="radio" name="vv" value="86">86
+        <input type="radio" name="vv" value="87">87
+        <input type="radio" name="vv" value="88">88
+        <input type="radio" name="vv" value="89">89
+        <input type="radio" name="vv" value="90">90<br>
+        <input type="radio" name="vv" value="91">91
+        <input type="radio" name="vv" value="92">92
+        <input type="radio" name="vv" value="93">93
+        <input type="radio" name="vv" value="94">94
+        <input type="radio" name="vv" value="95">95
+        <input type="radio" name="vv" value="96">96
+        <input type="radio" name="vv" value="97">97
+        <input type="radio" name="vv" value="98">98
+        <input type="radio" name="vv" value="99">99
+        <input type="radio" name="vv" value="100">100
+
+        <hr>
+        <button id="btn-volume-select" onclick="volume_select()">select</button>
+
+</div>
+<div id="volume-control-2">
+    <h1>CURRENT VOLUME LEVEL : </h1>
+    <button id=""> change</button>
+</div>
 </body>
 </html>
+
+  
+
