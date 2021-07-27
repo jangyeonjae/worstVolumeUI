@@ -1,17 +1,29 @@
-audio {
-    /*visibility: hidden;*/
+#volume-control-1{
+ 
+    width: 500px;
+    height: 500px;
+    border: 1px solid blue;
 }
-button{
-    width: 200px;
-    height: 50px;
-}
-#volume-control-1 {
+#volume-control-2{
     display: none;
     width: 500px;
     height: 500px;
     border: 1px solid blue;
 }
-#volume-control-2 {
+#volume-control-3{
+    display: none;
+    width: 500px;
+    height: 500px;
+    border: 1px solid blue;
+}
+#volume-control-4{
+    display: none;
+    width: 500px;
+    height: 500px;
+    border: 1px solid blue;
+}
+
+#volume-control-5{
     display: none;
     width: 500px;
     height: 500px;
