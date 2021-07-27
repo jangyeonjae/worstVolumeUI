@@ -1,4 +1,20 @@
 
+var num = 1;
+var now = num;
+function level(direct){
+    if(direct==1){
+        if(num == 5) return;
+        num++;
+    } else{
+        if(num ==1) return;
+        num--;
+    }
+    var next = num;
+
+    if()
+
+
+}
 
 
 
@@ -18,17 +34,3 @@ function volumeControl(){
 }
 
 
-var num = 1;
-function level(direct){
-    if(direct==1){
-        if(num == 5) return;
-        num++;
-    } else{
-        if(num ==1) return;
-        num--;
-    }
-
-    var volumeControlLevel = document.getElementById("volume-control-1");
-
-
-}

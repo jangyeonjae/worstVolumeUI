@@ -1,31 +1,7 @@
-#volume-control-1{
-    display: none;
-    width: 500px;
-    height: 500px;
-    border: 1px solid blue;
-}
-#volume-control-2{
-    display: none;
-    width: 500px;
-    height: 500px;
-    border: 1px solid blue;
-}
-#volume-control-3{
-    display: none;
-    width: 500px;
-    height: 500px;
-    border: 1px solid blue;
-}
-#volume-control-4{
-    display: none;
-    width: 500px;
-    height: 500px;
-    border: 1px solid blue;
-}
+.volume-control{
+display: none;
+width: 500;
+height: 500;
+border:  1px solid blue;    
 
-#volume-control-5{
-    display: none;
-    width: 500px;
-    height: 500px;
-    border: 1px solid blue;
 }
