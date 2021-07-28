@@ -21,8 +21,5 @@ function level(direct){
     } else{
         if(num ==1) return;
         num--;
-    }
-    if(volumeControl1.style.display == 'block'){
-        volumeControl1.style.display ='none';
-    
+    }  
 }
