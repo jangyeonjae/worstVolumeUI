@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
-    <title>Document</title>
+    <title>level3</title>
     <script type="text/javascript" src="main.js"></script>
     <script>
     function volumeControl(){
@@ -17,8 +17,6 @@
         }
     }
 
-
-        
 
     function diceRolling() {
         let volumeValue = 0;
@@ -34,33 +32,95 @@
         s_value = volumeValue * 0.01;
         audio.volume = s_value;
     }
+
     </script>
 </head>
 <body>
     <h1>LEVEL3</h1>
     <audio id="audio" src="./audio/Tab_-_Moonlit__feat._Nem_Nieves__amp__Jade_Gritty_.mp3" autoplay loop controls id="myAudio"></audio><br>
     <div>
-        <button onclick="level(0)">prev</button>
+        <button onClick="location.href='level2.html'">prev</button>
         <button onclick="play()">play</button>
         <button onclick="pause()">pause</button>
         <button onclick="volumeControl()">volume</button>
-        <button onclick="level(1)">next</button>
+        <button onclick="location.href='level4.html'">next</button>
     </div>
     <div id="volume-control-3">
-        <div id="dice1"><p id="value1">0</p></div>
-        <div id="dice2"><p id="value2">0</p></div>
-        <div id="dice3"><p id="value3">0</p></div>
-        <div id="dice4"><p id="value4">0</p></div>
-        <div id="dice5"><p id="value5">0</p></div>
-        <div id="dice6"><p id="value6">0</p></div>
-        <div id="dice7"><p id="value7">0</p></div>
-        <div id="dice8"><p id="value8">0</p></div>
-        <div id="dice9"><p id="value9">0</p></div>
-        <div id="dice10"><p id="value10">0</p></div>
-        <div id="dice11"><p id="value11">0</p></div>
-        <div id="dice12"><p id="value12">0</p></div>
+        <div id="dice1">
+            <h1 id="volumeValue">VOLUME:</h1>
+            <p id="value1">0</p>
+            <label>
+                <input type="checkbox" id="hold1">hold
+            </label>
+        </div>
+        <div id="dice2">
+            <p id="value2">0</p>
+            <label>
+                <input type="checkbox" id="hold2">hold
+            </label>
+        </div>
+        <div id="dice3">
+            <p id="value3">0</p>
+            <label>
+                <input type="checkbox" id="hold3">hold
+            </label>
+        </div>
+        <div id="dice4">
+            <p id="value4">0</p>
+            <label>
+                <input type="checkbox" id="hold4">hold
+            </label>
+        </div>
+        <div id="dice5">
+            <p id="value5">0</p>
+            <label>
+                <input type="checkbox" id="hold5">hold
+            </label>
+        </div>
+        <div id="dice6">
+            <p id="value6">0</p>
+            <label>
+                <input type="checkbox" id="hold6">hold
+            </label>
+        </div>
+        <div id="dice7">
+            <p id="value7">0</p>
+            <label>
+                <input type="checkbox" id="hold7">hold
+            </label>
+        </div>
+        <div id="dice8">
+            <p id="value8">0</p>
+            <label>
+                <input type="checkbox" id="hold8">hold
+            </label>
+        </div>
+        <div id="dice9">
+            <p id="value9">0</p>
+            <label>
+                <input type="checkbox" id="hold9">hold
+            </label>
+        </div>
+        <div id="dice10">
+            <p id="value10">0</p>
+            <label>
+                <input type="checkbox" id="hold10">hold
+            </label>
+        </div>
+        <div id="dice11">
+            <p id="value11">0</p>
+            <label>
+                <input type="checkbox" id="hold11">hold
+            </label>
+        </div>
+        <div id="dice12">
+            <p id="value12">0</p>
+            <label>
+                <input type="checkbox" id="hold12">hold
+            </label>
+        </div>
         <button id="roll" onclick="diceRolling()">roll</button>
-        <h1 id="volumeValue">VOLUME:</h1>
+        
     </div>
 </body>
 </html>
