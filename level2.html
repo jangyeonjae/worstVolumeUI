@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+    <script type="text/javascript" src="main.js"></script>
+    <script>
+    function volumeControl(){
+        var volumeControl2 = document.getElementById("volume-control-2");
+        if(volumeControl2.style.display == 'none'){
+            volumeControl2.style.display ='block';
+        }else{
+            volumeControl2.style.display ='none';
+        }
+    }
+    function volumeChange() {
+        var volumeValue = Math.floor(Math.random()*101);
+        
+        var volumeChange = document.getElementById("volume-value");
+        volumeChange.innerText= volumeValue + "%";
+        s_value = volumeValue * 0.01;
+                audio.volume = s_value;
+    }
+    </script>
+</head>
+<body>
+    <audio id="audio" src="./audio/Tab_-_Moonlit__feat._Nem_Nieves__amp__Jade_Gritty_.mp3" autoplay loop controls id="myAudio"></audio><br>
+    <div>
+        <button onclick="level(0)">prev</button>
+        <button onclick="play()">play</button>
+        <button onclick="pause()">pause</button>
+        <button onclick="volumeControl()">volume</button>
+        <button onclick="level(1)">next</button>
+    </div>
+    <div id="volume-control-2">
+        <h1>CURREND VOLUME LEVEL :</h1><h1 id="volume-value">%</h1>
+        <button onclick="volumeChange()">Change</button>
+    </div>
+</body>
+</html>
