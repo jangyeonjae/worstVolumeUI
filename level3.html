@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+    <script type="text/javascript" src="main.js"></script>
+    <script>
+    function volumeControl(){
+        var volumeControl3 = document.getElementById("volume-control-3");
+        if(volumeControl3.style.display == 'none'){
+            volumeControl3.style.display ='block';
+        }else{
+            volumeControl3.style.display ='none';
+        }
+    }
+
+
+        
+
+    function diceRolling() {
+
+
+        for (var j=1;j<=12;j++){
+            var valuej =document.getElementById("value"+j);
+        }
+
+    
+        
+        var consoleTest ="";
+
+        for (var i =1 ; i <=12;i++){
+            valuei = Math.floor(Math.random()*6+1);
+
+            consoleTest = consoleTest+"dice"+i+"-"+valuei+", ";
+
+        }
+        console.log(consoleTest);
+        
+
+
+        
+    }
+    </script>
+</head>
+<body>
+    <h1>LEVEL3</h1>
+    <audio id="audio" src="./audio/Tab_-_Moonlit__feat._Nem_Nieves__amp__Jade_Gritty_.mp3" autoplay loop controls id="myAudio"></audio><br>
+    <div>
+        <button onclick="level(0)">prev</button>
+        <button onclick="play()">play</button>
+        <button onclick="pause()">pause</button>
+        <button onclick="volumeControl()">volume</button>
+        <button onclick="level(1)">next</button>
+    </div>
+    <div id="volume-control-3">
+        <div id="dice1"><p id="value1">0</p></div>
+        <div id="dice2"><p id="value2">0</p></div>
+        <div id="dice3"><p id="value3"></p></div>
+        <div id="dice4"><p id="value4"></p></div>
+        <div id="dice5"><p id="value5"></p></div>
+        <div id="dice6"><p id="value6"></p></div>
+        <div id="dice7"><p id="value7"></p></div>
+        <div id="dice8"><p id="value8"></p></div>
+        <div id="dice9"><p id="value9"></p></div>
+        <div id="dice10"><p id="value10"></p></div>
+        <div id="dice11"><p id="value11"></p></div>
+        <div id="dice12"><p id="value12"></p></div>
+        <button id="roll" onclick="diceRolling()">roll</button>
+    </div>
+</body>
+</html>
