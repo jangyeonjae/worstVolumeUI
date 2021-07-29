@@ -4,36 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>worstVolumeUI</title>
-
     <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+    <script type="text/javascript" src="main.js"></script>
     <script>
-    var audioEle = document.getElementById('audio');
-    var btnPlay = document.getElementById('btn-play');
-    var btnPause = document.getElementById('btn-pause');
-    var btnVolume = document.getElementById('btn-volume-control');
-    var btnVolumeSelect = document.getElementById('btn-volume-select');
-
- 
-
-    function btnPlay_click() {
-        audio.play();
-    }
-
-	function btnPause_click() {
-		audio.pause();
-	}
-
-    function btnVolume_click() {
-
+    function volumeControl(){
         var volumeControl1 = document.getElementById("volume-control-1");
-        if(volumeControl1.style.display =='none'){
+        if(volumeControl1.style.display == 'none'){
             volumeControl1.style.display ='block';
         }else{
             volumeControl1.style.display ='none';
         }
     }
-
     function volume_select() {
         var vv_length = document.getElementsByName("vv").length;
         var volume_value ="";
@@ -46,35 +28,20 @@
             }
         }
     }
-
-    function nextLevel(){
-        var volumeControl1 = document.getElementById("volume-control-1");
-        var volumeControl2 = document.getElementById("volume-control-2");
-        if(volumeControl1.style.display =='block'){
-            volumeControl1.style.display ='none';
-            volumeControl2.style.display ='block';
-        }
-    }
-
-
-
-
-
-    
     </script>
-
 </head>
 <body>
-    <audio id="audio" src="./audio/Tab_-_Moonlit__feat._Nem_Nieves__amp__Jade_Gritty_.mp3" autoplay loop controls id="myAudio" volume="0.2"></audio>
-
-<button>prev</button>
-<button id="btn-play" onclick="btnPlay_click()" value="play">play</button>
-<button id="btn-pause" onclick="btnPause_click()" value="Pause">pause</butoon>
-<button id="btn-volume-control" onclick="btnVolume_click()">volume</button>
-<button id="btn-next-level" onclick="nextLevel()">next</button>
-
-<div id="volume-control-1">
-    <p>! volume select !</p>
+    <h1>LEVEL1</h1>
+    <audio id="audio" src="./audio/Tab_-_Moonlit__feat._Nem_Nieves__amp__Jade_Gritty_.mp3" autoplay loop controls id="myAudio"></audio><br>
+    <div>
+        <button onclick="level(0)">prev</button>
+        <button onclick="play()">play</button>
+        <button onclick="pause()">pause</button>
+        <button onclick="volumeControl()">volume</button>
+        <button onClick="location.href='level2.html'">next</button>
+    </div>
+    <div id="volume-control-1">
+        <p>! volume select !</p>
         <input type="radio" name="vv" value="1">1
         <input type="radio" name="vv" value="2">2
         <input type="radio" name="vv" value="3">3
@@ -179,14 +146,6 @@
 
         <hr>
         <button id="btn-volume-select" onclick="volume_select()">select</button>
-
-</div>
-<div id="volume-control-2">
-    <h1>CURRENT VOLUME LEVEL : </h1>
-    <button id=""> change</button>
-</div>
+    </div>
 </body>
 </html>
-
-  
-

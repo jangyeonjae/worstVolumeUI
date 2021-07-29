@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>level4</title>
+    <script type="text/javascript" src="main.js"></script>
+    <script>
+    function volumeControl(){
+        var volumeControl4 = document.getElementById("volume-control-4");
+        if(volumeControl4.style.display == 'none'){
+            volumeControl4.style.display ='block';
+        }else{
+            volumeControl4.style.display ='none';
+        }
+    }
+    </script>
+</head>
+<body>
+    <h1>LEVEL4</h1>
+    <audio id="audio" src="./audio/Tab_-_Moonlit__feat._Nem_Nieves__amp__Jade_Gritty_.mp3" autoplay loop controls id="myAudio"></audio><br>
+    <div>
+        <button onclick="location.href='level3.html'">prev</button>
+        <button onclick="play()">play</button>
+        <button onclick="pause()">pause</button>
+        <button onclick="volumeControl()">volume</button>
+        <button onclick="level(1)">next</button>
+    </div>
+    <div id="volume-control-4">
+ 
+    </div>
+</body>
+</html>
