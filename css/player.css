@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+#wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ff6e6c;
+  }
+#header{
+    font-family: 'Anton', sans-serif;
+    font-size: 2em;
+    color: #ffffff;
+}
+
+#player {
+    width: 700px;
+    height: 500px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.8);
+    margin-bottom: 200px;
+  }
+
+#music-info {
+   padding: 50px;
+}
+
+  #album-art{
+      width: 100px;
+      height: 100px;
+      background: royalblue;
+      float: left;
+  }
+
+#music-info > p {
+    font-size: 1.5em;
+}
+
+#music-title{
+    font-weight: bold;
+}
