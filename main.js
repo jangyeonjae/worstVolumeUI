@@ -1,25 +1,22 @@
-function play() {
-    audio.play();
-}
-function pause() {
-    audio.pause();
-}
-function volumeControl(){
-    var volumeControl1 = document.getElementById("volume-control-1");
-    if(volumeControl1.style.display == 'none'){
-        volumeControl1.style.display ='block';
-    }else{
-        volumeControl1.style.display ='none';
-    }
-}
-
-
-function level(direct){
-    if(direct==1){
-        if(num == 5) return;
-        num++;
-    } else{
-        if(num ==1) return;
-        num--;
-    }  
-}
+let clicked = 0;
+        function play(){
+            let playPause = document.getElementById("play-pause");
+            
+            if(clicked){
+                playPause.className ="play";
+                clicked = 0;
+                audio.play();
+            }else{
+                playPause.className ="pause";
+                clicked = 1;
+                audio.pause();
+            }
+        }
+        function volumeControl(){
+            let volumeControl = document.getElementById("volume-controller");
+            if(volumeControl.style.display == 'none'){
+                volumeControl.style.display ='block';
+            }else{
+                volumeControl.style.display ='none';
+            }
+        }
