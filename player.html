@@ -4,23 +4,181 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/player.css">
-    <title>player test</title>
+    <title>test</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        #wrapper{
+     
+            width: 960px;
+            margin: 0 auto;
+            background-color:tomato;
+            
+        }
+/*header*/
+        header {
+            display: flex;
+			width: 960px;
+			height: 240px;
+			border-bottom: 1px solid black;
+            align-content: center;
+            justify-content: center;
+		}
+
+        .header-text{
+            font-family: 'Anton', sans-serif;
+			font-size:3em;
+			color:white;
+			text-align:center;
+		}
+/*player*/
+        #player{
+            width: 700px;
+            height: 510px;
+            border-radius: 25px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        li {
+            list-style: none;
+            line-height: 2em;
+        }
+
+        #title{
+            font-weight: bold;
+        }
+        #album-art {
+			float: left;
+			width: 225px;
+            height: 250px;
+		}
+
+        #art {
+            width: 150px;
+            height: 150px;
+            background-color: royalblue;
+            margin: 50px;
+            margin-right: 25px;
+        }
+
+        #info {
+			float: right;
+			width: 475px;
+			height: 250px;
+			font-size: nomal;
+		}
+
+        .text{
+            margin: 75px;
+            margin-left: 25px;
+            margin-right: 50px;
+        }
+        #progress-bar {
+			clear: both;
+			width: 600px;
+   
+            margin-left: 50px;
+            margin-right: 50px;
+			height:5px;
+			background-color: #ababab;
+		}
+        #controller {
+            display: flex;
+            justify-content: center;
+			width: 700px;
+			height: 150px;
+		}
+        
+        button {
+            width: 70px;
+            height: 70px;
+            margin-top: 60px;
+        }
+        #play{
+            margin-left: 90px;
+            margin-right: 90px;
+        }
+
+        
+        #volume-low {
+			float: left;
+			width: 150px;
+            height: 105px;
+		}
+
+        #low{
+            width: 40px;
+            height: 40px;
+            background-color: royalblue;
+            margin-top: 20px;
+            margin-left: 100px;
+        }
+
+        #high{
+            width: 40px;
+            height: 40px;
+            background-color:royalblue;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+
+        #volume-bar{
+            width: 400px;
+            height: 5px;
+            background-color: #ababab;
+            margin: 150px;
+            margin-top: 40px;
+        }
+
+        #volume-high {
+			float: right;
+			width: 150px;
+            height: 105px;
+		}
+/*footer*/
+        footer {
+			width: 960px;
+			height: 240px;
+			border-bottom: 1px solid black;
+		}
+    </style>
 </head>
 <body>
-    <div id="wrap">
-        <div id="header">
-            <h1 id="title"><span>WORST VOLUME UI </span><span>LEVEL1</span></h1>
-        </div>
+    <div id="wrapper">
+        <header>
+            <ul class="header-text">
+                <li id="project-name">WORST VOLUME UI</li>
+                <li id="level">ROUND </li>
+            </ul>
+        </header>
         <div id="player">
             <div id="music-info">
-                <img id="album-art"></div>
-                <p><span id="music-title">Music Title</span><br>
-                <span id="artist-name">Artist Name</span></p>
+                <div id="album-art">
+                    <img id="art">
+                </div>
+                <div id="info">
+                    <ul class="text">
+                        <li id="title">Title</li>
+                        <li id="artist-name">Artist Name</li>
+                    </ul>
+                </div>
             </div>
-            <div id="progress-bar"></div>
+            <div id="progress-bar">
+
+            </div>
+            <div id="controller">
+                <button id="prev">prev</button>
+                <button id="play">play</button>
+                <button id="next">next</button>
+            </div>
+            <div id="volume-low">
+                <img id="low">
+            </div>
+            <div id="volume-high">
+                <img id="high">
+            </div>
             <div id="volume-bar"></div>
         </div>
+        <footer></footer>
     </div>
 </body>
 </html>

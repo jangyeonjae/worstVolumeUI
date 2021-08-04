@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/player.css">
+    <title>round1</title>
+    <script type="text/javascript" src="main.js"></script>
+    <script>
+        function volumeChange() {
+        let volumeValue = Math.floor(Math.random()*101);
+        let volumeChange = document.getElementById("volume-value");
+
+        document.getElementById("volume-range").style.width = volumeValue*4+"px";
+        volumeChange.textContent= volumeValue + "%";
+        s_value = volumeValue * 0.01;
+        audio.volume = s_value;
+    }
+
+    function volumeSelect() {
+        var volumeLength = document.getElementsByName("volume-value").length;
+        var volumeValue ="";
+        var s_value = 0;
+        for (var i = 0 ; i<volumeLength ; i++){
+            if(document.getElementsByName("volume-value")[i].checked == true){
+                volumeValue = (volumeValue + document.getElementsByName("volume-value")[i].value);
+                s_value = parseInt(volumeValue) * 0.01;
+                document.getElementById("volume-range").style.width = volumeValue*4+"px";
+                audio.volume = s_value;
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <audio id="audio" src="./audio/Tab_-_Moonlit__feat._Nem_Nieves__amp__Jade_Gritty_.mp3" autoplay loop controls id="myAudio"></audio>
+    <div id="wrapper">
+        <header>
+            <ul class="header-text">
+                <li id="project-name">WORST VOLUME UI</li>
+                <li id="round">ROUND1</li>
+            </ul>
+        </header>
+        <div id="player">
+            <div id="music-info">
+                <div id="album-art">
+                    <img id="art">
+                </div>
+                <div id="info">
+                    <ul class="text">
+                        <li id="title">Title</li>
+                        <li id="artist-name">Artist Name</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="progress-bar">
+
+            </div>
+            <div id="controller">
+                <button id="prev" onClick="location.href='round1.html'">prev</button>
+                <button id="play-pause" class="play" class="pause"
+                 onclick="play()">play</button>
+                <button id="next" onClick="location.href='round2.html'">next</button>
+            </div>
+            <div id="volume-low">
+                <img id="low" onClick="volumeControl()">
+            </div>
+            <div id="volume-high">
+                <img id="high">
+            </div>
+            <div id="volume-bar">
+                <div id="volume-range"></div>
+            </div>
+        </div>
+        <div id="volume-controller">
+            <h1>VOLUME SELECT</h1>
+            <div>
+                <script>
+                    for (let i = 1 ; i <=100 ; i ++){
+                        if(i%10 ===0){
+                            document.write("<input type='radio' name='volume-value' value='"+i+"'>"+i+"<br>");
+                        }else{
+                            document.write("<input type='radio' name='volume-value' value='"+i+"'>"+i);
+                        }
+                    }
+                </script>
+            </div>
+            <button id="volume-select" onclick="volumeSelect()">select</button>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>

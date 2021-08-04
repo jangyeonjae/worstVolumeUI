@@ -1,41 +1,163 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-#wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #ff6e6c;
-  }
-#header{
-    font-family: 'Anton', sans-serif;
-    font-size: 2em;
-    color: #ffffff;
+audio {
+   
 }
+        #wrapper{
+            width: 960px;
+            margin: 0 auto;
+            background-color:tomato;
+            
+        }
+/*header*/
+        header {
+            display: flex;
+			width: 960px;
+			height: 240px;
+			border-bottom: 1px solid black;
+            align-content: center;
+            justify-content: center;
+		}
 
-#player {
-    width: 700px;
-    height: 500px;
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.8);
-    margin-bottom: 200px;
-  }
+        .header-text{
+            font-family: 'Anton', sans-serif;
+			font-size:3em;
+			color:white;
+			text-align:center;
+		}
+/*player*/
+        #player{
+            width: 700px;
+            height: 510px;
+            border-radius: 25px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
 
-#music-info {
-   padding: 50px;
-}
+        li {
+            list-style: none;
+            line-height: 2em;
+        }
 
-  #album-art{
-      width: 100px;
-      height: 100px;
-      background: royalblue;
-      float: left;
-  }
+        #title{
+            font-weight: bold;
+        }
+        #album-art {
+			float: left;
+			width: 225px;
+            height: 250px;
+		}
 
-#music-info > p {
-    font-size: 1.5em;
-}
+        #art {
+            width: 150px;
+            height: 150px;
+            background-color: royalblue;
+            margin: 50px;
+            margin-right: 25px;
+        }
 
-#music-title{
-    font-weight: bold;
-}
+        #info {
+			float: right;
+			width: 475px;
+			height: 250px;
+			font-size: nomal;
+		}
+
+        .text{
+            margin: 75px;
+            margin-left: 25px;
+            margin-right: 50px;
+        }
+        #progress-bar {
+			clear: both;
+			width: 600px;
+   
+            margin-left: 50px;
+            margin-right: 50px;
+			height:5px;
+			background-color: #ababab;
+		}
+        #controller {
+            display: flex;
+            justify-content: center;
+			width: 700px;
+			height: 150px;
+		}
+        
+        button {
+            width: 70px;
+            height: 70px;
+            margin-top: 60px;
+        }
+        #play-pause{
+            margin-left: 90px;
+            margin-right: 90px;
+        }
+        
+        .play{
+            color: royalblue;
+        }
+        .pause{
+            color: salmon;
+        }
+
+        
+        #volume-low {
+			float: left;
+			width: 150px;
+            height: 105px;
+		}
+
+        #low{
+            width: 40px;
+            height: 40px;
+            background-color: royalblue;
+            margin-top: 20px;
+            margin-left: 100px;
+        }
+
+        #high{
+            width: 40px;
+            height: 40px;
+            background-color:royalblue;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+
+        #volume-bar{
+            position: relative;
+            width: 400px;
+            height: 5px;
+            background-color: #ababab;
+            margin: 150px;
+            margin-top: 40px;
+        }
+
+        #volume-range{
+            position: absolute;
+            width: 200px;
+            height: 5px;
+            background-color: #565656;
+            
+        }
+
+        #volume-high {
+			float: right;
+			width: 150px;
+            height: 105px;
+		}
+        #volume-controller{
+            display: none;
+            margin-top: 20px;
+            padding: 50px;
+            width: 600px;
+            height: 350px;
+            border-radius: 25px;
+            font-family: 'Anton', sans-serif;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+/*footer*/
+        footer {
+			width: 960px;
+			height: 240px;
+			border-bottom: 1px solid black;
+		}
