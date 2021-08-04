@@ -9,10 +9,18 @@
     <script type="text/javascript" src="main.js"></script>
     <script>
         function diceRolling(){
-            let dice1st = document.getElementById("dice-1st");
-            let diceValue = Math.floor(Math.random()*6+1);
+            let volumeValue = 0;
+            let s_value;
 
-            dice1st.setAttribute("src", "./images/dice"+diceValue+".PNG");
+            for (let i = 1 ; i <=12 ; i++){
+                let diceValuei = Math.floor(Math.random()*6+1);
+                let dicei = document.getElementById("dice"+i);
+                volumeValue = volumeValue + diceValuei;
+                dicei.setAttribute("src", "./images/dice"+diceValuei+".PNG");
+            }
+            document.getElementById("volume-range").style.width = volumeValue*4+"px";
+            s_value = volumeValue * 0.01;
+            audio.volume = s_value;
         }
     </script>
 </head>
@@ -59,8 +67,11 @@
             </div>
             <div id="volume-controller">
                 <div class="dice">
-                    <img id="dice-1st" src="./images/dice1.PNG">
-                    <img><img><img><img><img><img><img><img><img><img><img>
+                    <script>
+                        for(let i = 1 ; i<=12 ; i++){
+                            document.write("<img id='dice"+i+"' src='./images/dice1.PNG'>")
+                        }
+                    </script>
                 </div>
                 <button onclick="diceRolling()">ROLL</button>
             </div>
