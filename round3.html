@@ -8,15 +8,12 @@
     <title>round3</title>
     <script type="text/javascript" src="main.js"></script>
     <script>
-        function volumeChange() {
-        let volumeValue = Math.floor(Math.random()*101);
-        let volumeChange = document.getElementById("volume-value");
+        function diceRolling(){
+            let dice1st = document.getElementById("dice-1st");
+            let diceValue = Math.floor(Math.random()*6+1);
 
-        document.getElementById("volume-range").style.width = volumeValue*4+"px";
-        volumeChange.textContent= volumeValue + "%";
-        s_value = volumeValue * 0.01;
-        audio.volume = s_value;
-    }
+            dice1st.setAttribute("src", "./images/dice"+diceValue+".PNG");
+        }
     </script>
 </head>
 <body>
@@ -62,7 +59,8 @@
             </div>
             <div id="volume-controller">
                 <div class="dice">
-                    <img><img><img><img><img><img><img><img><img><img><img><img>
+                    <img id="dice-1st" src="./images/dice1.PNG">
+                    <img><img><img><img><img><img><img><img><img><img><img>
                 </div>
                 <button onclick="diceRolling()">ROLL</button>
             </div>
