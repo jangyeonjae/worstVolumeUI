@@ -12,11 +12,4 @@ let clicked = 0;
                 audio.pause();
             }
         }
-        function volumeControl(){
-            let volumeControl = document.getElementById("volume-controller");
-            if(volumeControl.style.display == 'none'){
-                volumeControl.style.display ='block';
-            }else{
-                volumeControl.style.display ='none';
-            }
-        }
+ 

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 audio {
-   
+   display: none;
 }
         #wrapper{
             width: 960px;
@@ -25,8 +25,12 @@ audio {
 			color:white;
 			text-align:center;
 		}
+        .container{
+            text-align: center;
+        }
 /*player*/
         #player{
+            display: inline-block;
             width: 700px;
             height: 510px;
             border-radius: 25px;
@@ -146,7 +150,7 @@ audio {
             height: 105px;
 		}
         #volume-controller{
-            display: none;
+            display: inline-block;
             margin-top: 20px;
             padding: 50px;
             width: 600px;
@@ -154,6 +158,12 @@ audio {
             border-radius: 25px;
             font-family: 'Anton', sans-serif;
             background-color: rgba(255, 255, 255, 0.8);
+        }
+/*round3-dice*/
+        .dice {
+            width: 600px;
+            height: 250px;
+            background-color: salmon;
         }
 /*footer*/
         footer {

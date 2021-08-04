@@ -28,79 +28,44 @@
                 <li id="round">ROUND3</li>
             </ul>
         </header>
-        <div id="player">
-            <div id="music-info">
-                <div id="album-art">
-                    <img id="art">
+        <div class="container">
+            <div id="player">
+                <div id="music-info">
+                    <div id="album-art">
+                        <img id="art">
+                    </div>
+                    <div id="info">
+                        <ul class="text">
+                            <li id="title">Title</li>
+                            <li id="artist-name">Artist Name</li>
+                        </ul>
+                    </div>
                 </div>
-                <div id="info">
-                    <ul class="text">
-                        <li id="title">Title</li>
-                        <li id="artist-name">Artist Name</li>
-                    </ul>
+                <div id="progress-bar">
+
+                </div>
+                <div id="controller">
+                    <button id="prev" onClick="location.href='round2.html'">prev</button>
+                    <button id="play-pause" class="play" class="pause"
+                    onclick="play()">play</button>
+                    <button id="next" onClick="location.href='round4.html'">next</button>
+                </div>
+                <div id="volume-low">
+                    <img id="low" onClick="volumeControl()">
+                </div>
+                <div id="volume-high">
+                    <img id="high">
+                </div>
+                <div id="volume-bar">
+                    <div id="volume-range"></div>
                 </div>
             </div>
-            <div id="progress-bar">
-
+            <div id="volume-controller">
+                <div class="dice">
+                </div>
+                <button onclick="diceRolling">ROLL</button>
             </div>
-            <div id="controller">
-                <button id="prev" onClick="location.href='round2.html'">prev</button>
-                <button id="play-pause" class="play" class="pause"
-                 onclick="play()">play</button>
-                <button id="next" onClick="location.href='round4.html'">next</button>
-            </div>
-            <div id="volume-low">
-                <img id="low" onClick="volumeControl()">
-            </div>
-            <div id="volume-high">
-                <img id="high">
-            </div>
-            <div id="volume-bar">
-                <div id="volume-range"></div>
-            </div>
-        </div>
-        <div id="volume-controller">
-            <ul>
-                <li>
-                    <img> 1
-                </li>
-                <li>
-                    <img> 2
-                </li>
-                <li>
-                    <img> 3
-                </li>
-                <li>
-                    <img> 4
-                </li>
-                <li>
-                    <img> 5
-                </li>
-                <li>
-                    <img> 6
-                </li>
-                <li>
-                    <img> 7
-                </li>
-                <li>
-                    <img> 8
-                </li>
-                <li>
-                    <img> 9
-                </li>
-                <li>
-                    <img> 10
-                </li>
-                <li>
-                    <img> 11
-                </li>
-                <li>
-                    <img> 12
-                </li>
-
-            </ul>
-            <button onclick="diceRolling">ROLL</button>
-        </div>
+    </div>
         <footer></footer>
     </div>
 </body>
