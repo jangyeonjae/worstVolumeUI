@@ -162,8 +162,14 @@ audio {
 /*round3-dice*/
         .dice {
             width: 600px;
-            height: 250px;
+            height: 205px;
             background-color: salmon;
+        }
+        .dice > img{
+            width: 90px;
+            height: 90px;
+            margin: 5px;
+            background-color: skyblue;
         }
 /*footer*/
         footer {
