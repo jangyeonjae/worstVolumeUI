@@ -33,6 +33,7 @@ audio {
             display: inline-block;
             width: 700px;
             height: 510px;
+            margin: 50px;
             border-radius: 25px;
             background-color: rgba(255, 255, 255, 0.8);
         }
@@ -72,14 +73,21 @@ audio {
             margin-right: 50px;
         }
         #progress-bar {
+            position: relative;
 			clear: both;
 			width: 600px;
-   
             margin-left: 50px;
             margin-right: 50px;
 			height:5px;
 			background-color: #ababab;
 		}
+        #progress-range{
+            position: absolute;
+            width: 2px;
+            height: 5px;
+            background-color: #565656;
+            
+        }
         #controller {
             display: flex;
             justify-content: center;
@@ -163,7 +171,7 @@ audio {
         .dice {
             width: 600px;
             height: 205px;
-            background-color: salmon;
+ 
         }
         .dice > img{
             width: 85px;
