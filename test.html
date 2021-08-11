@@ -1,0 +1,12 @@
+<audio id="audio" src="./audio/Tab_-_Moonlit__feat._Nem_Nieves__amp__Jade_Gritty_.mp3" autoplay loop controls id="myAudio"></audio>
+<p>test<span id="test"</p>
+<script>
+    let audio = document.getElementById("audio");
+
+audio.ontimeupdate = function() {myFunction()};
+
+function myFunction() {
+  
+  document.getElementById("test").innerHTML = audio.currentTime;
+}
+</script>
